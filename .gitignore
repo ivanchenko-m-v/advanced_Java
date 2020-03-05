@@ -1,2 +1,3 @@
 /.idea/
-/lesson01/target/
+/*/target/
+*.iml
