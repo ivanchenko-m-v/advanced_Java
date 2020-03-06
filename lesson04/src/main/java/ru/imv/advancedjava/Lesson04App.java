@@ -1,13 +1,12 @@
 package ru.imv.advancedjava;
 
+import java.util.LinkedList;
+
 /**
  * Hello world!
- *
  */
-public class Lesson04App
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+public class Lesson04App {
+    public static void main(String[] args) {
+        LinkedList<Integer> list = new LinkedList<>();
     }
 }
