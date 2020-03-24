@@ -13,6 +13,7 @@
     <artifactId>multithreading</artifactId>
     <modules>
         <module>introduce01</module>
+        <module>volatile</module>
     </modules>
     <packaging>pom</packaging>
 
