@@ -14,6 +14,7 @@
     <modules>
         <module>introduce01</module>
         <module>volatile</module>
+        <module>synchronized</module>
     </modules>
     <packaging>pom</packaging>
 
