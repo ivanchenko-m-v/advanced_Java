@@ -18,6 +18,7 @@
         <module>volatile</module>
         <module>synchronized</module>
         <module>synchronized_II</module>
+        <module>threadpool</module>
     </modules>
     <packaging>pom</packaging>
 
