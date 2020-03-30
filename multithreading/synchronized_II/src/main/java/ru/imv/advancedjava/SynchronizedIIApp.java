@@ -1,40 +1,55 @@
 package ru.imv.advancedjava;
 
-import java.util.stream.IntStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 /**
  * Synchronized, version II
  */
 public class SynchronizedIIApp {
-    private volatile int counter;
-
-    public SynchronizedIIApp() {
+    public static void main(String[] args) throws InterruptedException {
+        new Worker().main();
     }
+}
 
-    public static void main(String[] args) {
-        SynchronizedIIApp app = new SynchronizedIIApp();
-        app.doWork();
-    }
+class Worker {
+    private static final Random random = new Random();
 
-    private void incrementCounter() {
-        synchronized (this) {
-            ++counter;
+    private List<Integer> list1 = new ArrayList<>();
+    private List<Integer> list2 = new ArrayList<>();
+
+    private void addToList(List<Integer> list, int rndSeed) {
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        synchronized(list) {
+            list.add(random.nextInt(rndSeed));
         }
     }
 
-    public void doWork() {
+    private void doWork() {
+        for (int counter = 0; counter < 1000; ++counter) {
+            addToList(list1, 100);
+            addToList(list2, 100);
+        }
+    }
+
+    public void main() {
+        long before = System.currentTimeMillis();
+
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                IntStream.range(0, 10000)
-                        .forEach(i -> incrementCounter());
+                doWork();
             }
         });
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                IntStream.range(0, 10000)
-                        .forEach(i -> incrementCounter());
+                doWork();
             }
         });
         t1.start();
@@ -47,6 +62,10 @@ public class SynchronizedIIApp {
             e.printStackTrace();
         }
 
-        System.out.println(counter);
+        long after = System.currentTimeMillis();
+        System.out.println("Program took " + (after - before) + "ms to run");
+
+        System.out.println("List1 (" + list1.size() + "):" + list1);
+        System.out.println("List2 (" + list2.size() + "):" + list2);
     }
 }
