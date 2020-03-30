@@ -7,14 +7,11 @@
     <groupId>ru.imv.advancedjava</groupId>
     <artifactId>advanced_Java</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <modules>
-        <module>lesson01</module>
-        <module>lesson02</module>
-        <module>lesson03</module>
-        <module>lesson04</module>
-        <module>lesson05</module>
-        <module>lesson06</module>
-        <module>lesson07</module>
+        <module>collections</module>
         <module>multithreading</module>
     </modules>
     <packaging>pom</packaging>

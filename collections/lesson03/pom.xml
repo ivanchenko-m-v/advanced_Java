@@ -2,18 +2,16 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
     <parent>
-        <artifactId>multithreading</artifactId>
+        <artifactId>collections</artifactId>
         <groupId>ru.imv.advancedjava</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>ru.imv.advancedjava</groupId>
-    <artifactId>introduce01</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <description>Introduce into Multithreading lesson module</description>
-    <name>Multithreading01 - Introduce into Multithreading</name>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>lesson03</artifactId>
+
+    <name>lesson03</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 

@@ -7,18 +7,22 @@
         <groupId>ru.imv.advancedjava</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
-    <description>Multithreading parent module</description>
-    <name>Multithreading parent module</name>
-    <artifactId>multithreading</artifactId>
+
+    <artifactId>collections</artifactId>
+    <description>Collections parent module</description>
+    <name>Collections parent module</name>
 
     <modules>
-        <module>introduce01</module>
-        <module>volatile</module>
-        <module>synchronized</module>
-        <module>synchronized_II</module>
+        <module>lesson01</module>
+        <module>lesson02</module>
+        <module>lesson03</module>
+        <module>lesson04</module>
+        <module>lesson05</module>
+        <module>lesson06</module>
+        <module>lesson07</module>
     </modules>
     <packaging>pom</packaging>
+
 
 </project>

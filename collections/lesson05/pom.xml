@@ -4,19 +4,25 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ru.imv.advancedjava</groupId>
-  <artifactId>lesson06</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <description>LinkedHashMap, TreeMap</description>
+  <parent>
+    <artifactId>collections</artifactId>
+    <groupId>ru.imv.advancedjava</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
 
-  <name>lesson06 - LinkedHashMap, TreeMap</name>
+  <groupId>ru.imv.advancedjava</groupId>
+  <artifactId>lesson05</artifactId>
+  <description>Lesson about Map, HashMap</description>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>lesson05 - Map, HashMap</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
   </properties>
 
   <dependencies>
