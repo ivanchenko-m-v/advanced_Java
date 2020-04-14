@@ -19,6 +19,7 @@
         <module>synchronized</module>
         <module>synchronized_II</module>
         <module>threadpool</module>
+        <module>producer_consumer_I</module>
     </modules>
     <packaging>pom</packaging>
 
