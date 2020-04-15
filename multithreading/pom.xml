@@ -21,6 +21,7 @@
         <module>threadpool</module>
         <module>producer_consumer_I</module>
         <module>wait_notify</module>
+        <module>producer_consumer_II</module>
     </modules>
     <packaging>pom</packaging>
 
