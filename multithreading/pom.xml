@@ -20,6 +20,7 @@
         <module>synchronized_II</module>
         <module>threadpool</module>
         <module>producer_consumer_I</module>
+        <module>wait_notify</module>
     </modules>
     <packaging>pom</packaging>
 
