@@ -23,6 +23,7 @@
         <module>wait_notify</module>
         <module>producer_consumer_II</module>
         <module>count_down_latch</module>
+        <module>reentrant_lock</module>
     </modules>
     <packaging>pom</packaging>
 
