@@ -24,6 +24,7 @@
         <module>producer_consumer_II</module>
         <module>count_down_latch</module>
         <module>reentrant_lock</module>
+        <module>semaphore</module>
     </modules>
     <packaging>pom</packaging>
 
