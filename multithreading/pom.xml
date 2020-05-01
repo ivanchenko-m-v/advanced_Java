@@ -25,6 +25,7 @@
         <module>count_down_latch</module>
         <module>reentrant_lock</module>
         <module>semaphore</module>
+        <module>deadlock</module>
     </modules>
     <packaging>pom</packaging>
 
