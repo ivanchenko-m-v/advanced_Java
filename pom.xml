@@ -13,6 +13,7 @@
     <modules>
         <module>collections</module>
         <module>multithreading</module>
+        <module>regexp</module>
     </modules>
     <packaging>pom</packaging>
 
