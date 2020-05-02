@@ -26,6 +26,7 @@
         <module>reentrant_lock</module>
         <module>semaphore</module>
         <module>deadlock</module>
+        <module>thread_terminate</module>
     </modules>
     <packaging>pom</packaging>
 
