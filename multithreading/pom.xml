@@ -27,6 +27,7 @@
         <module>semaphore</module>
         <module>deadlock</module>
         <module>thread_terminate</module>
+        <module>callable_future</module>
     </modules>
     <packaging>pom</packaging>
 

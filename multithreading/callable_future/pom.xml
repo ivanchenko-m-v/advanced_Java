@@ -11,10 +11,10 @@
     </parent>
 
     <groupId>ru.imv.advancedjava</groupId>
-    <artifactId>thread_terminate</artifactId>
+    <artifactId>callable_future</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>thread_terminate</name>
+    <name>callable_future</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
