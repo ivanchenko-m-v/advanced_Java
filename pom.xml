@@ -14,6 +14,7 @@
         <module>collections</module>
         <module>multithreading</module>
         <module>regexp</module>
+        <module>lambda</module>
     </modules>
     <packaging>pom</packaging>
 
