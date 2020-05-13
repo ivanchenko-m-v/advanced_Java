@@ -1,12 +1,12 @@
 package ru.imv.advancedjava;
 
 interface Executable {
-    int execute();
+    int execute(int x, int y);
 }
 
 class Runner {
     public void run(Executable e) {
-        System.out.println(e.execute());
+        System.out.println(e.execute(8, 12));
     }
 }
 
@@ -19,14 +19,14 @@ public class LambdaIApp {
 
         runner.run(new Executable() {
             @Override
-            public int execute() {
+            public int execute(int x, int y) {
                 System.out.println("Executable anonymous class");
-                return 1;
+                return x + y + 1;
             }
         });
-        runner.run(() -> {
+        runner.run((x, y) -> {
             System.out.println("Executable anonymous method");
-            return 5;
+            return x + y + 5;
         });
     }
 }
