@@ -16,6 +16,7 @@
 
     <modules>
         <module>lambda_I</module>
+        <module>lambdaII</module>
     </modules>
 
 </project>
