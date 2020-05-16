@@ -15,6 +15,7 @@
         <module>multithreading</module>
         <module>regexp</module>
         <module>lambda</module>
+        <module>unittesting</module>
     </modules>
     <packaging>pom</packaging>
 
