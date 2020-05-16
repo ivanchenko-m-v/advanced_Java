@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class NetworkUtilsTest {
 
-    @Test(timeout = 1000)
+    @Test(timeout = 1200)
     public void testConnectToServer(){
         NetworkUtils.connect();
     }
