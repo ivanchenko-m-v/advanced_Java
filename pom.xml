@@ -16,6 +16,7 @@
         <module>regexp</module>
         <module>lambda</module>
         <module>unittesting</module>
+        <module>extra_topic</module>
     </modules>
     <packaging>pom</packaging>
 
