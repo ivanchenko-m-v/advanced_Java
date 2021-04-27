@@ -1,5 +1,6 @@
 package ru.imv.advancedjava;
 
+import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -10,7 +11,7 @@ import java.util.stream.IntStream;
  */
 public class DeadlockApp {
     public static void main(String[] args) throws InterruptedException {
-        main_1();
+        main_3();
     }
 
     /*
@@ -66,6 +67,34 @@ public class DeadlockApp {
 
         runner.finished();
     }
+
+    /*
+    synchrinized
+     */
+    private static void main_3() throws InterruptedException {
+        Runner2 runner = new Runner2();
+
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                runner.firstThread();
+            }
+        });
+        Thread t2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                runner.secondThread();
+            }
+        });
+        t1.start();
+        t2.start();
+
+        t1.join();
+        t2.join();
+
+        runner.finished();
+    }
+
 }
 
 class Account {
@@ -184,6 +213,43 @@ class Runner1 {
                         Account.transfer(account2, account1, random.nextInt(100));
                     } finally {
                         releaseLocks(lock1, lock2);
+                    }
+                });
+    }
+
+    public void finished() {
+        System.out.println("Account1 : " + account1.getBalance());
+        System.out.println("Account2 : " + account2.getBalance());
+        System.out.println("Total balance : " + (account1.getBalance() + account2.getBalance()));
+    }
+}
+
+class Runner2 {
+    private Account account1 = new Account();
+    private Account account2 = new Account();
+
+    private Integer int1 = 0, int2 = 0;
+
+    private Random random = new Random();
+
+    public void firstThread() {
+        IntStream.range(0, 10000)
+                .forEach(i -> {
+                    synchronized (int1) {
+                        synchronized (int2) {
+                            Account.transfer(account1, account2, random.nextInt(100));
+                        }
+                    }
+                });
+    }
+
+    public void secondThread() {
+        IntStream.range(0, 10000)
+                .forEach(i -> {
+                    synchronized (int1) {
+                        synchronized (int2) {
+                            Account.transfer(account2, account1, random.nextInt(100));
+                        }
                     }
                 });
     }
